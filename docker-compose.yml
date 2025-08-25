@@ -42,12 +42,14 @@ services:
       - SYS_ADMIN
     networks:
       - internal
+
     expose:
       - 8081
     command:
       - '-housekeeping_interval=15s'
       - '-docker_only=true'
       - '-store_container_labels=false'
+      - '-port=8081'
     devices:
       - /dev/kmsg
     volumes:
